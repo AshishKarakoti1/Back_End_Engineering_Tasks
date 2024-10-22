@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; background-color: black; color: white; font-family: sans-serif; height: 100vh; flex-direction: column; font-size: 3rem;">
+    <h1>Hello <%= name %></h1>
+    <% if (hours >= 0 && hours < 12) { %>
+        <h1> Good Morning</h1>
+    <% } %>
+    <% if (hours >= 12 && hours < 16) { %>
+        <h1> Good Afternoon</h1>
+    <% } %>
+    <% if (hours >= 16 && hours < 20) { %>
+        <h1> Good Evening</h1>
+    <% } %>
+    <% if (hours >= 20 && hours < 24) { %>
+        <h1> Good Night</h1>
+    <% } %>
+    <h1>Welcome to <span style="color: blue;"><%= destination %></span></h1>
+</body>
+</html>
