@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile of <%= username %></title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 2rem;
+            background-color: black;
+            color: white;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile {
+            background-color: royalblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: 0 auto;
+            height: 200px;
+            width: 300px;
+        }
+        h1 {
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <h1><%= username %></h1>
+        <p><strong>Age :</strong> <%= age %></p>
+        <p><strong>Skills :</strong> <%= skills %></p>
+    </div>
+</body>
+</html>
