@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <style>
+        body {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .product-catalog {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        .product img {
+            height: 200px;
+            width: 300px;            
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Catalog</h1>
+    <a href="/upload">Upload New Product Image</a>
+    <div class="product-catalog">
+        <% products.forEach(product => { %>
+            <div class="product">
+                <img src="<%= product.image %>" alt="<%= product.name %>">
+                <h2><%= product.name %></h2>
+                <p><%= product.description %></p>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
